@@ -8,7 +8,7 @@ Input Parameters:
 Tables/Views:
 	Start Here
 
-Creates Table/View:
+Creates Tables/Views:
 	Enter Here
 
 Functions:
