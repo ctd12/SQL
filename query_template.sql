@@ -16,14 +16,14 @@ Functions:
 
 Author: Your Name Here
 
-Department: Patient Financial Services
+Department: Your Department Here
 
-Purpose/Description
-	Entere Here
+Purpose/Description:
+	Enter Here
 
 Revision History:
 Date		Version		Description
 ----		----		----
-2018-07-13	v1			Initial Creation
+2021-01-25	v1		Initial Creation
 ***********************************************************************
 */
