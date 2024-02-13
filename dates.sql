@@ -5,7 +5,7 @@ SET @ThisDate = getdate();
 --http://www.sqlservercentral.com/blogs/lynnpettis/2009/03/25/some-common-date-routines/
 */ 
 
-select dateadd(dd, datediff(dd, 0, @ThisDate), 0)     -- Beginning of this day
+select dateadd(dd, datediff(dd, 0, @ThisDate), 0);     -- Beginning of this day
 select dateadd(dd, datediff(dd, 0, @ThisDate) + 1, 0) -- Beginning of next day
 select dateadd(dd, datediff(dd, 0, @ThisDate) - 1, 0) -- Beginning of previous day
 select dateadd(wk, datediff(wk, 0, @ThisDate), 0)     -- Beginning of this week (Monday)
