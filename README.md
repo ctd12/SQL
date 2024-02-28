@@ -1,5 +1,4 @@
 ### SQL-Queries
-
 General SQL syntax, queries, and methodology to assist with work projects.
 
 _Files:_
