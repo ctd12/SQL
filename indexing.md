@@ -6,20 +6,36 @@ An example of why indexing a table is useful would be to equate it to a glossary
 
 ## CREATE INDEX Syntax
 
-
+Creates an index on a table where duplicate values are allowed.
 
 ```
 CREATE INDEX index_name
-ON table_name (column1, column2, ...);
+ON database.schema.table_name (column1, column2, ...);
 ```
 
 ## CREATE UNIQUE INDEX Syntax
 
+Creates an index on a table where duplicate values are *not* allowed. This means that no two rows are allowed to have the same index key value.
 
+An example where this could be useful would be a database with users' email addresses. The company can't have multiple users with the same email address.
 
 ```
 CREATE UNIQUE INDEX index_name
-ON table_name (column1, column2, ...);
+ON database.schema.table_name (column1, column2, ...);
 ```
 
-Reference: https://www.w3schools.com/sql/sql_create_index.asp
+## DROP INDEX Syntax
+
+Deletes an index on a table.
+
+```
+DROP INDEX index_name
+ON database.schema.table_name;
+```
+
+## Notes
+The code in this document is for T-SQL, however the sytax for other databases is very similar.
+
+References:
+<br>https://www.w3schools.com/sql/sql_create_index.asp
+<br>https://docs.aws.amazon.com/clouddirectory/latest/developerguide/indexing_search_unique.html
