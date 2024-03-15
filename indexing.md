@@ -1,4 +1,4 @@
-## Indexing in T-SQL
+## What is Indexing?
 
 Indexes are used in order to retrieve data from a table more quickly than a table without an index. 
 
