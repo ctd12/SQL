@@ -1,4 +1,4 @@
-# Indexing in T-SQL
+## Indexing in T-SQL
 
 Indexes are used in order to retrieve data from a table more quickly than a table without an index. 
 
@@ -6,7 +6,7 @@ An example of why indexing a table is useful would be to equate it to a glossary
 
 Updating a table with indexes takes more time than updating a table without (because the indexes also need an update). So, it's good practice to only create indexes on columns that will be frequently searched against.
 
-## CREATE INDEX Syntax
+## CREATE INDEX
 
 Creates an index on a table where duplicate values are allowed.
 
@@ -15,7 +15,7 @@ CREATE INDEX index_name
 ON database.schema.table_name (column1, column2, ...);
 ```
 
-## CREATE UNIQUE INDEX Syntax
+## CREATE UNIQUE INDEX
 
 Creates an index on a table where duplicate values are *not* allowed. This means that no two rows are allowed to have the same index key value.
 
@@ -26,7 +26,7 @@ CREATE UNIQUE INDEX index_name
 ON database.schema.table_name (column1, column2, ...);
 ```
 
-## DROP INDEX Syntax
+## DROP INDEX
 
 Deletes an index on a table.
 
@@ -36,7 +36,7 @@ ON database.schema.table_name;
 ```
 
 ## Notes
-The code in this document is for T-SQL, however the sytax for other databases is very similar.
+The code in this document is for T-SQL, however the syntax for other databases is very similar.
 
 References:
 <br>https://www.w3schools.com/sql/sql_create_index.asp
