@@ -1,5 +1,5 @@
 ## SQL-Queries
-General SQL syntax, queries, and methodology to assist with work projects.
+General SQL syntax, queries, and methodology for reference.
 
 _Files:_
 * **dates.sql:**
