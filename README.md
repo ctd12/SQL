@@ -2,7 +2,7 @@
 General T-SQL syntax, queries, and methodology for reference.
 
 ## Files
-* **dates.sql:**
+* **dates.md:**
   * Select statements to reference difference dates in time. Ex: first date of previous month.
 * **indexing.md:**
   * Select statements to reference difference dates in time. Ex: first date of previous month.
