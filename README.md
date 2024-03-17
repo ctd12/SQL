@@ -3,8 +3,7 @@ General T-SQL syntax, queries, and methodology for reference.
 
 ## Files
 _dates.md_
-* Select statements to reference difference dates in time.
-  * Example: first day of the previous month
+* Select statements to reference difference dates in time, such as the first date of last month.
 
 _indexing.md_
 * Basic overview of indexes; what they are and how to create/delete them from a table.
