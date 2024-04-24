@@ -41,7 +41,7 @@ SELECT * FROM #Duplicates;
 | 9    | 5    | E    |
 | 10   | 5    | E    |
 
-Without a PATRITION BY clause, each row will be assigned a different row number, ordered by the ORDER BY clause. ORDER BY must be present.
+Without a PARTITION BY clause, each row will be assigned a different row number, ordered by the ORDER BY clause. ORDER BY must be present.
 
 ```sql
 SELECT
@@ -64,7 +64,7 @@ FROM #Duplicates
 | 9    | 5    | E    | 9         |
 | 10   | 5    | E    | 10        |
 
-Partitioning restarts the count when a new value is introduced for each PARTIOTION BY column value.
+Partitioning restarts the count when a new value is introduced for each PARTITION BY column value.
 
 The below query will assign a row number for each row, with the row number resetting to 1 after a new value is introduced in Col1, the PARTITION BY column. The ORDER BY clause orders the table by Col1 before the rows are numbered:
 
@@ -113,6 +113,25 @@ FROM #Duplicates
 | 8    | 5    | E    | 1         |
 | 9    | 5    | E    | 2         |
 | 10   | 5    | E    | 3         |
+
+## Ranking Functions: RANK, DENSE_RANK
+
+Using the same temp table as above, RANK and DENSE_RANK can be used to rank the rows.
+
+To explain the difference, think of ROW_NUMBER as positional. RANK is both positional and logical. Those two rows are ranked logically the same, but the next row is ranked by the position in the set. DENSE_RANK ranks them logically. Order 2013-11-04 is the 7th unique date.
+
+|      | Col1 | Col2 | RowNumber | Rank | DenseRank |
+| ---- | ---- | ---- | --------- | ---- | --------- |
+| 1    | 1    | A    | 1         | 1    | 1         |
+| 2    | 1    | B    | 1         | 1    | 1         |
+| 3    | 2    | B    | 1         | 3    | 2         |
+| 4    | 2    | B    | 2         | 3    | 2         |
+| 5    | 3    | C    | 1         | 5    | 3         |
+| 6    | 4    | D    | 1         | 6    | 4         |
+| 7    | 4    | D    | 2         | 6    | 4         |
+| 8    | 5    | E    | 1         | 8    | 5         |
+| 9    | 5    | E    | 2         | 8    | 5         |
+| 10   | 5    | E    | 3         | 8    | 5         |
 
 ## Notes
 
