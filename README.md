@@ -15,4 +15,4 @@ _query_template.sql_
 * Template for creating a query; author, tables used, purpose, revision history, etc.
 
 _window_functions.md_
-* test
+* Overview of basic window functions.
