@@ -118,7 +118,15 @@ FROM #Duplicates
 
 Using the same temp table as above, RANK and DENSE_RANK can be used to rank the rows.
 
-To explain the difference, think of ROW_NUMBER as positional. RANK is both positional and logical. Those two rows are ranked logically the same, but the next row is ranked by the position in the set. DENSE_RANK ranks them logically. Order 2013-11-04 is the 7th unique date.
+```sql
+SELECT
+	Col1,
+	Col2,
+	ROW_NUMBER() OVER(ORDER BY Col1) as [RowNumber],
+	RANK() OVER(ORDER BY Col1) as [Rank],
+	DENSE_RANK() OVER(ORDER BY Col1) as [DenseRank]
+FROM #Duplicates
+```
 
 |      | Col1 | Col2 | RowNumber | Rank | DenseRank |
 | ---- | ---- | ---- | --------- | ---- | --------- |
@@ -132,6 +140,12 @@ To explain the difference, think of ROW_NUMBER as positional. RANK is both posit
 | 8    | 5    | E    | 1         | 8    | 5         |
 | 9    | 5    | E    | 2         | 8    | 5         |
 | 10   | 5    | E    | 3         | 8    | 5         |
+
+To explain the difference, think of ROW_NUMBER as positional. RANK is both positional and logical. Those two rows are ranked logically the same, but the next row is ranked by the position in the set. DENSE_RANK ranks them logically; Col1: 3 is the 3rd unique date.
+
+## Window Aggregates
+
+
 
 ## Notes
 
