@@ -23,6 +23,8 @@ The output for a sample database/table catalog titled "test" would be:
 | test    | dbo    | pets      | name       | nvarchar |
 | test    | dbo    | pets      | age        | int      |
 
+## Utilizing a WHERE Clause
+
 The above query will extract all information for all tables in that table catalog. However, specific tables and/or column names can be pulled just by using a simple WHERE clause:
 
 ```sql
@@ -41,3 +43,10 @@ The output for a sample database/table catalog titled "test" would be:
 | ----------------- | ------------ | ---------- | ----------- | --------- |
 | test    | dbo    | people    | first_name | nvarchar |
 | test    | dbo    | people    | last_name  | nvarchar |
+
+## Notes
+
+The code in this document is for T-SQL, however the syntax for other databases is very similar.
+
+References:
+<br>https://datatofish.com/data-type-columns-sql-server/
