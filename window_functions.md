@@ -41,14 +41,37 @@ SELECT * FROM #Duplicates;
 | 9    | 5    | E    |
 | 10   | 5    | E    |
 
-Partitioning by each column will restart the row numbers for each unique set of rows.
+Without a PATRITION BY clause, each row will be assigned a different row number, ordered by the ORDER BY clause. ORDER BY must be present.
+
+```sql
+SELECT
+	Col1,
+	Col2,
+	ROW_NUMBER() OVER(ORDER BY Col1) as RowNumber
+FROM #Duplicates
+```
+
+|      | Col1 | Col2 | RowNumber |
+| ---- | ---- | ---- | --------- |
+| 1    | 1    | A    | 1         |
+| 2    | 1    | B    | 2         |
+| 3    | 2    | B    | 3         |
+| 4    | 2    | B    | 4         |
+| 5    | 3    | C    | 5         |
+| 6    | 4    | D    | 6         |
+| 7    | 4    | D    | 7         |
+| 8    | 5    | E    | 8         |
+| 9    | 5    | E    | 9         |
+| 10   | 5    | E    | 10        |
+
+Partitioning restarts the count when a new value is introduced for each PARTIOTION BY column value.
 
 The below query will assign a row number for each row, with the row number resetting to 1 after a new value is introduced in Col1, the PARTITION BY column. The ORDER BY clause orders the table by Col1 before the rows are numbered:
 
 ```sql
 SELECT
-	col1,
-	col2,
+	Col1,
+	Col2,
 	ROW_NUMBER() OVER(PARTITION BY Col1 ORDER BY Col1) as RowNumber
 FROM #Duplicates
 ```
@@ -72,8 +95,8 @@ You can identify the unique rows by finding those with a row number equal to one
 
 ```sql
 SELECT
-	col1,
-	col2,
+	Col1,
+	Col2,
 	ROW_NUMBER() OVER(PARTITION BY Col1, Col2 ORDER BY Col1) as RowNumber
 FROM #Duplicates
 ```
