@@ -35,7 +35,7 @@ TABLE_NAME,
 COLUMN_NAME, 
 DATA_TYPE 
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME = "people" and COLUMN_NAME in ('first_name', 'last_name')
+WHERE TABLE_NAME = 'people' and COLUMN_NAME in ('first_name', 'last_name')
 ```
 The output for a sample database/table catalog titled "test" would be:
 
