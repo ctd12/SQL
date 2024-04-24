@@ -172,6 +172,7 @@ INSERT INTO #Sales (CustomerID, OrderDate, SalesOrderID, TotalDue) VALUES
 
 SELECT * FROM #Sales;
 ```
+
 |      | CustomerID | OrderDate  | SalesOrderID | TotalDue |
 | ---- | ---------- | ---------- | ------------ | -------- |
 | 1    | 101        | 2023-02-04 | 246          | 150.01   |
@@ -196,7 +197,7 @@ FROM #Sales
 ```
 
 |      | CustomerID | OrderDate  | SalesOrderID | TotalDue | Subtotal_PerCustomer |
-| ---- | ---------- | ---------- | ------------ | -------------------- |
+| ---- | ---------- | ---------- | ------------ | -------- | -------------------- |
 | 1    | 101        | 2023-02-04 | 246          | 150.01   | 347.66               |
 | 2    | 101        | 2023-02-21 | 350          | 75.34    | 347.66               |
 | 3    | 101        | 2023-03-15 | 406          | 122.31   | 347.66               |
@@ -209,6 +210,53 @@ FROM #Sales
 Including an ORDER BY clause after the partition above will produce a TotalDue running sum per CustomerID.
 
 SUM can be substituted for other aggregate functions such as AVG, COUNT, MAX, MIN, etc.
+
+## Offset Functions
+
+Offset functions allow the inclusion of values from other rows into rows without performing a self-join.
+
+Utilizing the standard #Sales table from above:
+
+|      | CustomerID | OrderDate  | SalesOrderID | TotalDue |
+| ---- | ---------- | ---------- | ------------ | -------- |
+| 1    | 101        | 2023-02-04 | 246          | 150.01   |
+| 2    | 101        | 2023-02-21 | 350          | 75.34    |
+| 3    | 101        | 2023-03-15 | 406          | 122.31   |
+| 4    | 102        | 2023-02-08 | 252          | 130.88   |
+| 5    | 102        | 2023-04-12 | 442          | 290.93   |
+| 6    | 102        | 2023-05-06 | 501          | 14.07    |
+| 7    | 103        | 2023-05-02 | 498          | 98.67    |
+| 8    | 103        | 2023-06-12 | 647          | 72.65    |
+
+### LAG
+
+LAG allows a value from a previous row to be included in a current row. Below, the previous TotalDue for each CustomerID is pulled into a new column:
+
+```sql
+SELECT
+	CustomerID,
+	OrderDate,
+	SalesOrderID,
+	TotalDue,
+	LAG(TotalDue) OVER(PARTITION BY CustomerID ORDER BY SalesOrderID) as [Previous_TotalDue],
+	LAG(TotalDue,2) OVER(PARTITION BY CustomerID ORDER BY SalesOrderID) as [Previous_2_TotalDue]
+FROM #Sales
+```
+
+|      | CustomerID | OrderDate  | SalesOrderID | TotalDue | Previous_TotalDue | Previous_2_TotalDue |
+| ---- | ---------- | ---------- | ------------ | -------- | ----------------- | ------------------- |
+| 1    | 101        | 2023-02-04 | 246          | 150.01   | NULL              | NULL                |
+| 2    | 101        | 2023-02-21 | 350          | 75.34    | 150.01            | NULL                |
+| 3    | 101        | 2023-03-15 | 406          | 122.31   | 75.34             | 150.01              |
+| 4    | 102        | 2023-02-08 | 252          | 130.88   | NULL              | NULL                |
+| 5    | 102        | 2023-04-12 | 442          | 290.93   | 130.88            | NULL                |
+| 6    | 102        | 2023-05-06 | 501          | 14.07    | 290.93            | 130.88              |
+| 7    | 103        | 2023-05-02 | 498          | 98.67    | NULL              | NULL                |
+| 8    | 103        | 2023-06-12 | 647          | 72.65    | 98.67             | NULL                |
+
+### LEAD
+
+The LEAD function differs from LAG in the fact that LEAD will take the value from the following row, rather than the previous row.
 
 ## Notes
 
