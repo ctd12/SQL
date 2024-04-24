@@ -46,7 +46,5 @@ The output for a sample database/table catalog titled "test" would be:
 
 ## Notes
 
-The code in this document is for T-SQL, however the syntax for other databases is very similar.
-
 References:
 <br>https://datatofish.com/data-type-columns-sql-server/
