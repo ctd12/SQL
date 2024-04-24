@@ -162,7 +162,7 @@ CREATE TABLE #Sales
 (
 	CustomerID INT,
 	SalesOrderID INT,
-	TotalDue INT
+	TotalDue FLOAT
 );
 
 INSERT INTO #Sales (CustomerID, SalesOrderID, TotalDue) VALUES
@@ -173,14 +173,16 @@ SELECT * FROM #Sales;
 ```
 |      | CustomerID | SalesOrderID | TotalDue |
 | ---- | ---------- | ------------ | -------- |
-| 1    | 101        | 246          | 150      |
-| 2    | 101        | 350          | 150      |
-| 3    | 101        | 406          | 150      |
-| 4    | 102        | 415          | 150      |
-| 5    | 102        | 442          | 150      |
-| 6    | 102        | 501          | 150      |
-| 7    | 103        | 598          | 150      |
-| 8    | 103        | 647          | 150      |
+| 1    | 101        | 246          | 150.01   |
+| 2    | 101        | 350          | 75.34    |
+| 3    | 101        | 406          | 122.31   |
+| 4    | 102        | 415          | 130.88   |
+| 5    | 102        | 442          | 290.93   |
+| 6    | 102        | 501          | 14.07    |
+| 7    | 103        | 598          | 98.67    |
+| 8    | 103        | 647          | 72.65    |
+
+### SUM
 
 ## Notes
 
