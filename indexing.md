@@ -36,7 +36,6 @@ ON database.schema.table_name;
 ```
 
 ## Notes
-The code in this document is for T-SQL, however the syntax for other databases is very similar.
 
 References:
 <br>https://www.w3schools.com/sql/sql_create_index.asp
