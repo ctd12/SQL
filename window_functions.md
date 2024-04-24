@@ -184,6 +184,28 @@ SELECT * FROM #Sales;
 
 ### SUM
 
+Normally, to see the sum of TotalDue for each CustomerID, a GROUP BY clause would be used. However, the only columns present would be the CustomerID and the total TotalDue. Using a window function, all data can be pulled along with the sum per Customer ID:
+
+```sql
+SELECT
+	CustomerID,
+	SalesOrderID,
+	TotalDue,
+	SUM(TotalDue) OVER(PARTITION BY CustomerID) as [Subtotal_PerCustomer]
+FROM #Sales
+```
+
+|      | CustomerID | SalesOrderID | TotalDue | Subtotal_PerCustomer |
+| ---- | ---------- | ------------ | -------- | -------------------- |
+| 1    | 101        | 246          | 150.01   | 347.66               |
+| 2    | 101        | 350          | 75.34    | 347.66               |
+| 3    | 101        | 406          | 122.31   | 347.66               |
+| 4    | 102        | 415          | 130.88   | 435.88               |
+| 5    | 102        | 442          | 290.93   | 435.88               |
+| 6    | 102        | 501          | 14.07    | 435.88               |
+| 7    | 103        | 598          | 98.67    | 171.32               |
+| 8    | 103        | 647          | 72.65    | 171.32               |
+
 ## Notes
 
 References:
