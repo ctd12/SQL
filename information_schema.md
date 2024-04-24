@@ -15,4 +15,10 @@ The output for a sample database/table catalog titled "test" would be:
 
 |   TABLE_CATALOG   | TABLE_SCHEMA | TABLE_NAME | COLUMN_NAME | DATA_TYPE |
 | ----------------- | ------------ | ---------- | ----------- | --------- |
-| test    | dbo    | cars    | brand    | price    |
+| test    | dbo    | cars      | brand      | nvarchar    |
+| test    | dbo    | cars      | price      | int    |
+| test    | dbo    | people    | first_name | nvarchar    |
+| test    | dbo    | people    | last_name  | nvarchar    |
+| test    | dbo    | people    | age        | int    |
+| test    | dbo    | pets      | name       | nvarchar    |
+| test    | dbo    | pets      | age        | int    |
