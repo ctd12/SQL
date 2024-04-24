@@ -260,5 +260,7 @@ The LEAD function differs from LAG in the fact that LEAD will take the value fro
 
 ## Notes
 
+The code in this document is for T-SQL, however the syntax for other databases is very similar.
+
 References:
 <br>https://www.red-gate.com/simple-talk/databases/sql-server/t-sql-programming-sql-server/introduction-to-t-sql-window-functions/
