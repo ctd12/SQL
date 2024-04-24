@@ -8,11 +8,11 @@ _dates.md_
 _indexing.md_
 * Basic overview of indexes; what they are and how to create/delete them from a table.
 
-_information_schema.sql_
+_information_schema.md_
 * How to get table information such as column names and column data types from a table catalog.
 
 _query_template.sql_
 * Template for creating a query; author, tables used, purpose, revision history, etc.
 
-_window_functions.sql_
+_window_functions.md_
 * test
