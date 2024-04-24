@@ -41,6 +41,8 @@ SELECT * FROM #Duplicates;
 | 9    | 5    | E    |
 | 10   | 5    | E    |
 
+### Basic Row Numbering
+
 Without a PARTITION BY clause, each row will be assigned a different row number, ordered by the ORDER BY clause. ORDER BY must be present.
 
 ```sql
@@ -63,6 +65,8 @@ FROM #Duplicates
 | 8    | 5    | E    | 8         |
 | 9    | 5    | E    | 9         |
 | 10   | 5    | E    | 10        |
+
+### Partitioning by One Column
 
 Partitioning restarts the count when a new value is introduced for each PARTITION BY column value.
 
@@ -89,6 +93,8 @@ FROM #Duplicates
 | 9    | 5    | E    | 2         |
 | 10   | 5    | E    | 3         |
 
+### Partitioning by All Columns
+
 Partitioning by each column will restart the row numbers for each unique set of rows.
 
 You can identify the unique rows by finding those with a row number equal to one.
@@ -114,7 +120,7 @@ FROM #Duplicates
 | 9    | 5    | E    | 2         |
 | 10   | 5    | E    | 3         |
 
-## Ranking Functions: RANK, DENSE_RANK
+### RANK, DENSE_RANK
 
 Using the same temp table as above, RANK and DENSE_RANK can be used to rank the rows.
 
