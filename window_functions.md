@@ -151,7 +151,36 @@ To explain the difference, think of ROW_NUMBER as positional. RANK is both posit
 
 ## Window Aggregates
 
+Window aggregates allow for aggregate functions to be displayed as a column without the use of a GROUP BY clause. This is useful if you want all data to be displayed.
 
+Create a temp table below containing customer sales data:
+
+```sql
+DROP TABLE IF EXISTS #Sales;
+
+CREATE TABLE #Sales
+(
+	CustomerID INT,
+	SalesOrderID INT,
+	TotalDue INT
+);
+
+INSERT INTO #Sales (CustomerID, SalesOrderID, TotalDue) VALUES
+(101,246,150),(101,350,75),(101,406,122),(102,415,130),
+(102,442,290),(102,501,14),(103,598,98),(103,647,72);
+
+SELECT * FROM #Sales;
+```
+|      | CustomerID | SalesOrderID | TotalDue |
+| ---- | ---------- | ------------ | -------- |
+| 1    | 101        | 246          | 150      |
+| 2    | 101        | 350          | 150      |
+| 3    | 101        | 406          | 150      |
+| 4    | 102        | 415          | 150      |
+| 5    | 102        | 442          | 150      |
+| 6    | 102        | 501          | 150      |
+| 7    | 103        | 598          | 150      |
+| 8    | 103        | 647          | 150      |
 
 ## Notes
 
