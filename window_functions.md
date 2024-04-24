@@ -161,50 +161,54 @@ DROP TABLE IF EXISTS #Sales;
 CREATE TABLE #Sales
 (
 	CustomerID INT,
+	OrderDate DATETIME,
 	SalesOrderID INT,
 	TotalDue FLOAT
 );
 
-INSERT INTO #Sales (CustomerID, SalesOrderID, TotalDue) VALUES
-(101,246,150),(101,350,75),(101,406,122),(102,415,130),
-(102,442,290),(102,501,14),(103,598,98),(103,647,72);
+INSERT INTO #Sales (CustomerID, OrderDate, SalesOrderID, TotalDue) VALUES
+(101,'2023-02-04',246,150.01),(101,'2023-02-21',350,75.34),(101,'2023-03-15',406,122.31),(102,'2023-02-08',252,130.88),
+(102,'2023-04-12',442,290.93),(102,'2023-05-06',501,14.07),(103,'2023-05-02',498,98.67),(103,'2023-06-12',647,72.65);
 
 SELECT * FROM #Sales;
 ```
-|      | CustomerID | SalesOrderID | TotalDue |
-| ---- | ---------- | ------------ | -------- |
-| 1    | 101        | 246          | 150.01   |
-| 2    | 101        | 350          | 75.34    |
-| 3    | 101        | 406          | 122.31   |
-| 4    | 102        | 415          | 130.88   |
-| 5    | 102        | 442          | 290.93   |
-| 6    | 102        | 501          | 14.07    |
-| 7    | 103        | 598          | 98.67    |
-| 8    | 103        | 647          | 72.65    |
-
-### SUM
+|      | CustomerID | OrderDate  | SalesOrderID | TotalDue |
+| ---- | ---------- | ---------- | ------------ | -------- |
+| 1    | 101        | 2023-02-04 | 246          | 150.01   |
+| 2    | 101        | 2023-02-21 | 350          | 75.34    |
+| 3    | 101        | 2023-03-15 | 406          | 122.31   |
+| 4    | 102        | 2023-02-08 | 252          | 130.88   |
+| 5    | 102        | 2023-04-12 | 442          | 290.93   |
+| 6    | 102        | 2023-05-06 | 501          | 14.07    |
+| 7    | 103        | 2023-05-02 | 498          | 98.67    |
+| 8    | 103        | 2023-06-12 | 647          | 72.65    |
 
 Normally, to see the sum of TotalDue for each CustomerID, a GROUP BY clause would be used. However, the only columns present would be the CustomerID and the total TotalDue. Using a window function, all data can be pulled along with the sum per Customer ID:
 
 ```sql
 SELECT
 	CustomerID,
+	OrderDate,
 	SalesOrderID,
 	TotalDue,
 	SUM(TotalDue) OVER(PARTITION BY CustomerID) as [Subtotal_PerCustomer]
 FROM #Sales
 ```
 
-|      | CustomerID | SalesOrderID | TotalDue | Subtotal_PerCustomer |
-| ---- | ---------- | ------------ | -------- | -------------------- |
-| 1    | 101        | 246          | 150.01   | 347.66               |
-| 2    | 101        | 350          | 75.34    | 347.66               |
-| 3    | 101        | 406          | 122.31   | 347.66               |
-| 4    | 102        | 415          | 130.88   | 435.88               |
-| 5    | 102        | 442          | 290.93   | 435.88               |
-| 6    | 102        | 501          | 14.07    | 435.88               |
-| 7    | 103        | 598          | 98.67    | 171.32               |
-| 8    | 103        | 647          | 72.65    | 171.32               |
+|      | CustomerID | OrderDate  | SalesOrderID | TotalDue | Subtotal_PerCustomer |
+| ---- | ---------- | ---------- | ------------ | -------------------- |
+| 1    | 101        | 2023-02-04 | 246          | 150.01   | 347.66               |
+| 2    | 101        | 2023-02-21 | 350          | 75.34    | 347.66               |
+| 3    | 101        | 2023-03-15 | 406          | 122.31   | 347.66               |
+| 4    | 102        | 2023-02-08 | 252          | 130.88   | 435.88               |
+| 5    | 102        | 2023-04-12 | 442          | 290.93   | 435.88               |
+| 6    | 102        | 2023-05-06 | 501          | 14.07    | 435.88               |
+| 7    | 103        | 2023-05-02 | 498          | 98.67    | 171.32               |
+| 8    | 103        | 2023-06-12 | 647          | 72.65    | 171.32               |
+
+Including an ORDER BY clause after the partition above will produce a TotalDue running sum per CustomerID.
+
+SUM can be substituted for other aggregate functions such as AVG, COUNT, MAX, MIN, etc.
 
 ## Notes
 
