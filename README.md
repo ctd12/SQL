@@ -1,17 +1,17 @@
 General T-SQL syntax, queries, and methodology for reference.
 
-## Files
-_dates.md_
-* Select statements to reference difference dates in time, such as the first date of last month.
+### Files
+* dates.md
+  * Select statements to reference difference dates in time, such as the first date of last month.
 
-_indexing.md_
-* Basic overview of indexes; what they are and how to create/delete them from a table.
+* indexing.md
+  * Basic overview of indexes; what they are and how to create/delete them from a table.
 
-_information_schema.md_
-* How to get table information such as column names and column data types from a table catalog.
+* information_schema.md
+  * How to get table information such as column names and column data types from a table catalog.
 
-_query_template.sql_
-* Template for creating a query; author, tables used, purpose, revision history, etc.
+* query_template.sql
+  * Template for creating a query; author, tables used, purpose, revision history, etc.
 
-_window_functions.md_
-* Overview of basic window functions.
+* window_functions.md
+  * Overview of basic window functions.
