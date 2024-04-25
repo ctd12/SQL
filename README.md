@@ -1,6 +1,7 @@
+## Repo: SQL
 General T-SQL syntax, queries, and methodology for reference.
 
-### Files
+## Files
 * dates.md
   * Select statements to reference difference dates in time, such as the first date of last month.
 
