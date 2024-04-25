@@ -1,4 +1,3 @@
-## SQL Repo
 General T-SQL syntax, queries, and methodology for reference.
 
 ## Files
