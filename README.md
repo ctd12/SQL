@@ -1,5 +1,5 @@
 # SQL
-Educational links to articles and guides on SQL. Queries and notation commonly needed aare in the files above.
+Educational links to articles and guides on SQL. Queries and notation commonly needed are in the files above.
 
 # What Does This Repository Have?
 
