@@ -5,6 +5,7 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 
 - [Information Schema](#information-schema)
 - [Sequencing](#sequencing-analytics)
+- [Window Functions](#window-functions)
 
 ## Information Schema
 
@@ -15,6 +16,20 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 
 **A Beginner's Guide to Sequence Analytics in SQL** [[Website](https://www.motifanalytics.com/posts/a-beginners-guide-to-sequence-analytics-in-sql)]
 * Article Description
+
+## Window Functions
+
+**Introduction to T-SQL Window Functions** [[Website](https://www.red-gate.com/simple-talk/databases/sql-server/t-sql-programming-sql-server/introduction-to-t-sql-window-functions/)]
+* Overview of basic window functions, including:
+  * ROW_NUMBER
+  * PARTITIONING
+  * RANK
+  * DENSE_RANK
+  * Window aggregate functions
+  * LAG
+  * LEAD
+ 
+The file **window_functions.md** contains a short writeup demonstrating the functions explained in the article.
 
 # Files
 **dates.md:** Select statements to reference difference dates in time, such as the first date of last month.
