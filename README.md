@@ -7,6 +7,9 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 
 ## Sequencing Analytics
 
+**A Beginner's Guide to Sequence Analytics in SQL** [[Website](https://www.motifanalytics.com/posts/a-beginners-guide-to-sequence-analytics-in-sql)]
+* Article Description
+
 # Files
 dates.md
 * Select statements to reference difference dates in time, such as the first date of last month.
