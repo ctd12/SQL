@@ -8,7 +8,7 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 
 ## Information Schema
 
-
+**Get the Data Type of Columns in SQL Server** [[Website](https://datatofish.com/data-type-columns-sql-server/)]
 
 ## Sequencing Analytics
 
