@@ -9,6 +9,7 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 ## Information Schema
 
 **Get the Data Type of Columns in SQL Server** [[Website](https://datatofish.com/data-type-columns-sql-server/)]
+* How to get table information such as table names, table column names, and column data types from a table catalog.
 
 ## Sequencing Analytics
 
@@ -20,9 +21,6 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 
 indexing.md
 * Basic overview of indexes; what they are and how to create/delete them from a table.
-
-information_schema.md
-* How to get table information such as column names and column data types from a table catalog.
 
 **query_template.sql:** Template for creating a query; author, tables used, purpose, revision history, etc.
 
