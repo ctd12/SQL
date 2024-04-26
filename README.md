@@ -3,6 +3,7 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 
 # What Does This Repository Have?
 
+- [Education: Information Schema]
 - [Education: Sequencing](#sequencing-analytics)
 
 ## Sequencing Analytics
