@@ -38,7 +38,7 @@ The file [window_functions.md](window_functions.md) contains a short writeup dem
 [indexing.md](indexing.md)
 * Basic overview of indexes; what they are and how to create/delete them from a table.
 
-[query_template.md](query_template.md)
+[query_template.sql](query_template.sql)
 * Template for creating a query; author, tables used, purpose, revision history, etc.
 
 [window_functions.md](window_functions.md)
