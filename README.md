@@ -32,14 +32,14 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 The file [window_functions.md](window_functions.md) contains a short writeup demonstrating the functions explained in the article.
 
 # Files
-**dates.md**
+[dates.md](dates.md)
 * Select statements to reference difference dates in time, such as the first date of last month.
 
-**indexing.md**
+[indexing.md](indexing.md)
 * Basic overview of indexes; what they are and how to create/delete them from a table.
 
-**query_template.sql**
+[query_template.sql](query_template.md)
 * Template for creating a query; author, tables used, purpose, revision history, etc.
 
-**window_functions.md**
+[window_functions.md](window_functions.md)
 * Overview of basic window functions.
