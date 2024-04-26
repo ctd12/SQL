@@ -25,7 +25,7 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
   * PARTITIONING
   * RANK
   * DENSE_RANK
-  * Window aggregate functions
+  * Window aggregates
   * LAG
   * LEAD
  
