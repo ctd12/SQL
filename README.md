@@ -29,7 +29,7 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
   * LAG
   * LEAD
  
-The file _window_functions.md_ contains a short writeup demonstrating the functions explained in the article.
+The file [window_functions.md](window_functions.md) contains a short writeup demonstrating the functions explained in the article.
 
 # Files
 **dates.md**
