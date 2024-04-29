@@ -3,9 +3,16 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 
 # What Does This Repository Have?
 
+- [Cross and Outer Apply](#cross-and-outer-apply)
 - [Information Schema](#information-schema)
 - [Sequencing](#sequencing-analytics)
 - [Window Functions](#window-functions)
+
+## Cross and Outer Apply
+
+**SQL Server CROSS APPLY and OUTER APPLY** [[Website](https://www.mssqltips.com/sqlservertip/1958/sql-server-cross-apply-and-outer-apply/)]
+* Detailed outline of how CROSS APPLY and OUTER APPLY differ from inner and left joins.
+* Includes examples you can copy and paste into your work station to see how they differ.
 
 ## Information Schema
 
