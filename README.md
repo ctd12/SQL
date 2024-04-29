@@ -27,7 +27,7 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 ## Window Functions
 
 **Introduction to T-SQL Window Functions** [[Website](https://www.red-gate.com/simple-talk/databases/sql-server/t-sql-programming-sql-server/introduction-to-t-sql-window-functions/)]
-* Overview of basic window functions, including:
+* Overview of basic window functions including:
   * ROW_NUMBER
   * PARTITIONING
   * RANK
