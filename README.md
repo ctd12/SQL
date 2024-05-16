@@ -12,7 +12,7 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 
 **Guide to T-SQL APPLY Operator** [[Website](https://thwack.solarwinds.com/groups/data-driven/b/blog/posts/what-is-sql-cross-apply-guide-to-t-sql-apply-operator)]
 * Detailed outline of how CROSS APPLY and OUTER APPLY worok.
-* These joins allow for values to be passed from a table or view into a user-defined function or subquery. For example, in a ledger of transactions, the sum of all transactions based on a product type can be added to each row.
+* These joins allow for values to be passed from a table or view into a user-defined function or subquery. For example, in a table of product types, the sum of all transactions from another table based on the product type can be added to each row.
 
 ## Information Schema
 
