@@ -3,10 +3,10 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 
 # What Does This Repository Have?
 
-- [Cross and Outer Apply](#cross-and-outer-apply)
-- [Information Schema](#information-schema)
-- [Sequencing](#sequencing-analytics)
-- [Window Functions](#window-functions)
+* [Cross and Outer Apply](#cross-and-outer-apply)
+* [Information Schema](#information-schema)
+* [Sequencing](#sequencing-analytics)
+* [Window Functions](#window-functions)
 
 ## Cross and Outer Apply
 
