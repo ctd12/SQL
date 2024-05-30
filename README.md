@@ -1,6 +1,8 @@
 # SQL
 Educational links to articles and guides on SQL. Queries and notation commonly needed are in the files above.
 
+https://www.w3schools.com/sql/sql_wildcards.asp
+
 # What Does This Repository Have?
 
 * [Cross and Outer Apply](#cross-and-outer-apply)
