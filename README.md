@@ -7,6 +7,7 @@ https://www.w3schools.com/sql/sql_wildcards.asp
 
 * [Cross and Outer Apply](#cross-and-outer-apply)
 * [Information Schema](#information-schema)
+* [Pivot Tables & Dynamic Pivot Tables](#pivot-tables-and-dynamic-pivot-tables)
 * [Sequencing](#sequencing-analytics)
 * [Window Functions](#window-functions)
 
@@ -20,6 +21,15 @@ https://www.w3schools.com/sql/sql_wildcards.asp
 
 **Get the Data Type of Columns in SQL Server** [[Website](https://datatofish.com/data-type-columns-sql-server/)]
 * How to get table information such as table names, table column names, and column data types from a table catalog.
+
+## Pivot Tables and Dynamic Pivot Tables
+
+**Dynamic Pivot Tables in SQL Server** [[Website](https://www.sqlshack.com/dynamic-pivot-tables-in-sql-server/)]
+* Guide on how to build regular and dynamic pivot tables.
+* Dynamic tables are used when it's not feasible/possible to hardcode all of the columns that we need to pivot on.
+
+**Prefix Column Names When Using Dynamic Pivot** [[Stack Overflow](https://stackoverflow.com/questions/40028251/prefix-column-names-when-using-dynamic-pivot)]
+* How to add a prefix to new columns in a dynamic pivot table.
 
 ## Sequencing Analytics
 
