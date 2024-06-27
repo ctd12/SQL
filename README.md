@@ -1,14 +1,13 @@
 # SQL
 Educational links to articles and guides on SQL. Queries and notation commonly needed are in the files above.
 
-https://www.w3schools.com/sql/sql_wildcards.asp
-
 # What Does This Repository Have?
 
 * [Cross and Outer Apply](#cross-and-outer-apply)
 * [Information Schema](#information-schema)
 * [Pivot Tables & Dynamic Pivot Tables](#pivot-tables-and-dynamic-pivot-tables)
 * [Sequencing](#sequencing-analytics)
+* [Wildcards](#wildcard-characters)
 * [Window Functions](#window-functions)
 
 ## Cross and Outer Apply
@@ -34,7 +33,12 @@ https://www.w3schools.com/sql/sql_wildcards.asp
 ## Sequencing Analytics
 
 **A Beginner's Guide to Sequence Analytics in SQL** [[Website](https://www.motifanalytics.com/posts/a-beginners-guide-to-sequence-analytics-in-sql)]
-* Article Description
+* Creating a sequence of events; order of events, next event, lag until next event, etc.
+
+## Wildcard Characters
+
+**SQL Wildcard Characters**[[Website](https://www.w3schools.com/sql/sql_wildcards.asp)]
+* Wildcard characters are used with the LIKE operator to search for a specified pattern in a column.
 
 ## Window Functions
 
