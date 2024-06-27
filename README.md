@@ -37,7 +37,7 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 
 ## Wildcard Characters
 
-**SQL Wildcard Characters**[[Website](https://www.w3schools.com/sql/sql_wildcards.asp)]
+**SQL Wildcard Characters** [[Website](https://www.w3schools.com/sql/sql_wildcards.asp)]
 * Wildcard characters are used with the LIKE operator to search for a specified pattern in a column.
 
 ## Window Functions
