@@ -1,4 +1,4 @@
-## T-SQL Window Functions
+## Adding a Column to an Existing Table
 
 Window functions perform a calculation over a set of rows. The window is defined by the OVER clause which determines if the rows are partitioned into smaller sets and if they are ordered. In fact, if you use a window function you will always use an OVER clause.
 
