@@ -55,6 +55,9 @@ Educational links to articles and guides on SQL. Queries and notation commonly n
 The file [window_functions.md](window_functions.md) contains a short writeup demonstrating the functions explained in the article.
 
 # Files
+[adding_columns.md](adding_columns.md)
+* How to add a column to an existing table.
+
 [dates.md](dates.md)
 * Select statements to reference difference dates in time, such as the first date of last month.
 
